@@ -52,6 +52,12 @@ PRODUCT_PACKAGES = \
 	init.qcom.coex.sh \
 	init.qcom.fm.sh \
 
+#filesystem	
+PRODUCT_PACKAGES = \
+	e2fsck \
+	make_ext4fs \
+	setup_fs \
+	
 # Ramdisk
 PRODUCT_PACKAGES = \
     fstab.qcom \
@@ -60,7 +66,9 @@ PRODUCT_PACKAGES = \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-
+#DTBTOOL
+PRODUCT_PACKAGES += \
+	dtbTooLCM
 # Prima WIFI Firmwares
 PRODUCT_COPY_FILES = \
     $(LOCAL_PATH)/wifi/prima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \

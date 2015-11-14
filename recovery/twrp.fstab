@@ -1,8 +1,10 @@
-# mount point	fstype	device			[device2]   fstype2
-
-/boot		emmc	/dev/block/bootdevice/by-name/boot
-/system		ext4	/dev/block/bootdevice/by-name/system
-/cache		ext4	/dev/block/bootdevice/by-name/cache
-/data		ext4	/dev/block/bootdevice/by-name/userdata 	 length=-16384
-
-/external_sd    vfat    /dev/block/mmcblk1p1 /dev/block/mmcblk1  flags=display="Micro SD";storage;wipeingui;removable
+/boot          emmc      /dev/block/mmcblk0p16
+/recovery      emmc      /dev/block/mmcblk0p17
+/data          ext4      /dev/block/mmcblk0p27                               length=-16384
+/cache         ext4      /dev/block/mmcblk0p25
+/system        ext4      /dev/block/mmcblk0p24
+/efs           ext4      /dev/block/mmcblk0p13                               flags=display="EFS";backup=1
+/persist       ext4      /dev/block/mmcblk0p22
+/firmware      vfat      /dev/block/mmcblk0p1
+/firmware-modem vfat     /dev/block/mmcblk0p2
+/external_sd   vfat      /dev/block/mmcblk1p1 /dev/block/mmcblk1              flags=display="Micro SDcard";storage;wipeingui;removable
